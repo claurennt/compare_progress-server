@@ -106,6 +106,9 @@ app.get("/compare-progress", async (req, res) => {
       }
     );
 
+    studentsWhoMadeProgress.forEach(({ user_id }) =>
+      console.log(`Keep it up ${user_id}! `)
+    );
     // return only the users who made progress with the primer
     return res
       .status(200)
